@@ -17,6 +17,7 @@ class App {
   middleware() {
     this._app.use(express.json());
     this._app.use(express.urlencoded({ extended: true }));
+    this._app.set('trust proxy', 1);
     this._app.use(rateLimit(rateLimitOptions));
     this._app.use(cors(corsOptions));
     return this;
