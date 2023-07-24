@@ -1,6 +1,6 @@
 export default {
   windowMs: 60 * 60 * 1000,
-  max: 10,
+  max: 100,
   handler: function (req, res) {
     res.status(429).json({
       error: true,
