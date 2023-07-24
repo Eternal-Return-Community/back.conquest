@@ -1,5 +1,5 @@
 export default {
-  origin: 'https://eternal-return-community.github.io/front.conquest',
+  origin: ['https://eternal-return-community.github.io', 'https://eternal-return-community.github.io/front.conquest'],
   methods: 'GET,POST',
   credentials: true
 }
