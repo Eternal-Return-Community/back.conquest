@@ -12,8 +12,6 @@ export const add = async (options: user): Promise<any> => {
       { upsert: true, new: true, projection: { _id: 0, __v: 0 } }
     );
 
-      console.log(nickname, mmr)
-
     console.log('|-> User added to the database.');
     return updatedUser;
   } catch (error) {
