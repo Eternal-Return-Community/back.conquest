@@ -7,7 +7,7 @@ export const calcElo = (mmr: number): string => {
   rp = (mmr % 250);
 
   if (elo === "Titan" || elo === "Mytiril" || elo === "Immortal") {
-    return `${elo} <br>RP: ${rp = (mmr % 6000)}`;
+    return `${elo} <br>RP: ${(mmr % 6000)}`;
   }
 
   return `${elo} ${division} <br>RP: ${rp}`;
