@@ -28,5 +28,5 @@ export const calcElo = (mmr: number) => {
   division = 4 - Math.floor((mmr % 1000) / 250);
   rp = (mmr % 250);
 
-  return `${elo} ${division} - RP: ${rp}`;
+  return `${elo} ${division} RP: ${rp}`;
 };
