@@ -1,7 +1,21 @@
-export const calcElo = (mmr: number) => {
-  let elo: string;
+export const calcElo = (mmr: number): string => {
+  let elo = eloFormatted(mmr);
   let division: number;
   let rp: number;
+
+  division = 4 - Math.floor((mmr % 1000) / 250);
+  rp = (mmr % 250);
+
+  if (elo === "Titan" || elo === "Mytiril" || elo === "Immortal") {
+    return `${elo} RP: ${rp = (mmr % 6000)}`;
+  }
+
+  return `${elo} ${division} RP: ${rp}`;
+
+};
+
+const eloFormatted = (mmr: number): string => {
+  let elo: string;
 
   if (mmr > 0 && mmr < 1000) {
     elo = "Iron";
@@ -23,10 +37,7 @@ export const calcElo = (mmr: number) => {
     elo = "Immortal";
   } else {
     elo = "No Elo";
-  }
+  };
 
-  division = 4 - Math.floor((mmr % 1000) / 250);
-  rp = (mmr % 250);
-
-  return `${elo} ${division} RP: ${rp}`;
-};
+  return elo;
+}
